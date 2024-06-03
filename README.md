@@ -4,6 +4,7 @@ Archiving is an enterprise feature that has been available for many years. A com
 
 WeCom APIs support proactively gathering archived messages and have been doing so for several years. Here is the high-level sequence diagram.
 
+```mermaid
 sequenceDiagram
     WeCom Admin Console->>WeCom: Activate the archving feature
     WeCom App->>WeCom: Initialize the connection
@@ -20,6 +21,7 @@ sequenceDiagram
         end
         end
     end
+```
 
 In summary, you need to continuously pull messages from WeCom, then decrypt, parse, and store them to the designated destination. Each message contains details such as the type of action, message time, sender, receivers, room ID, message type, and content. Be aware that WeCom has throttling controls in place at various points.
 
